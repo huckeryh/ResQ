@@ -1,2 +1,4 @@
 [client]
+	ignore = dirty
+[client "node_modules"]
 	ignore = untracked
