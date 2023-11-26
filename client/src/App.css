@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+
+.tables-grid {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-table {
+  border: 1px solid #000000;
+  padding: 15px;
+  text-align:center;
+}
+
+.selected::after {
+  content: '✔️';
+  display: inline-block;
+  margin-left: 5px;
+}
