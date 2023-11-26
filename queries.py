@@ -1,4 +1,4 @@
-table_name = '[dbo].[AGENTS]'
+table_name = '[dbo].[menu_item]'
 
 def read_all_query():
     return f"SELECT * FROM {table_name}"
