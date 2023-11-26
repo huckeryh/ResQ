@@ -1,3 +1,5 @@
+'''table names: [dbo].[menu_item], [dbo].[tableid], [dbo].[tableOrder]'''
+
 table_name = '[dbo].[menu_item]'
 
 def read_all_query():
