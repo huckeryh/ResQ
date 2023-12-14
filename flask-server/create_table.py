@@ -34,5 +34,6 @@ conn.execute('INSERT INTO Customer (customer_id, name, phone) VALUES (9302, "Cha
 
 conn.commit()
 
+print("Created table successfully!")
 
 conn.close()

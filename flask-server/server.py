@@ -11,9 +11,9 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-#@app.route('/')
-#def index():
- #   return "Restaurant Order Tracker Backend is Running"
+@app.route('/')
+def index():
+    return "Restaurant Order Tracker Backend is Running"
 
 @app.route("/members")
 def members():
@@ -33,6 +33,19 @@ def create_order():
     return jsonify(new_order), 201
 # Add more routes here for CRUD operations
 
+@app.route('/api/add_order', methods=['POST'])
+def add_order():
+    data = request.json
+    
+    # Create a new order instance using the data
+    new_order = Order(**data)  # assuming data keys match your model fields
+
+    # Add new order to the database
+    db.session.add(new_order)
+    db.session.commit()
+
+    return jsonify({'message': 'Order added successfully!'}), 201
+
 
 def init_db():
     conn = get_db_connection()
@@ -48,7 +61,7 @@ def init_db():
     ''')
     conn.commit()
     conn.close()
-
+    
 if __name__ == '__main__':
     app.run(debug=True)
 

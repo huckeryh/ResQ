@@ -14,7 +14,6 @@ FLASK (Terminal)
 
 REACT (Terminal)
  
-1. cd flask-server
-2. cd client
-3. $env:NODE_OPTIONS="--openssl-legacy-provider"
-4. npm start
+1. cd client
+2. $env:NODE_OPTIONS="--openssl-legacy-provider"
+3. npm start
